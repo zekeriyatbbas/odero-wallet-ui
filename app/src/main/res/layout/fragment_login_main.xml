@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LoginMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginMain">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="95dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:src="@drawable/back_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/oderoLogo"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </ImageView>
+
+
+        <ImageView
+            android:id="@+id/oderoLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="155dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="@+id/backButton"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/BodyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="354dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header">
+
+        <FrameLayout
+            android:id="@+id/inner_space1"
+            android:layout_width="match_parent"
+            android:layout_height="12dp">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/Body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/innerSpace2"
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/innerContainerBody"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/girisYapText"
+                    android:layout_width="350dp"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/dm_sans_medium"
+                    android:letterSpacing="0"
+                    android:lineHeight="30dp"
+                    android:text="Giriş yap"
+                    android:textAlignment="center"
+                    android:textColor="#101828"
+                    android:textFontWeight="500"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/inner_space3"
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/tcSifreContainer"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/tcInput"
+                    android:layout_width="350dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/tc_sifre_bg"
+                    android:clickable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/person_img"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/person_shape" />
+
+                    <LinearLayout
+                        android:id="@+id/tcInputTextContainer"
+                        android:layout_width="286dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/tcTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/dm_sans"
+                            android:hint="TC Kimlik Numarası"
+                            android:inputType="numberSigned"
+                            android:letterSpacing="0"
+                            android:lineHeight="20dp"
+                            android:maxLength="11"
+                            android:textColor="#667085"
+                            android:textFontWeight="400"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/inner_space4"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp">
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/passwordInput"
+                    android:layout_width="350dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/tc_sifre_bg"
+                    android:clickable="true"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/password_img"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/lock_img" />
+
+                    <LinearLayout
+                        android:id="@+id/sifreInputTextContainer"
+                        android:layout_width="286dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/sifreTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/dm_sans"
+                            android:hint="Şifre"
+                            android:inputType="numberPassword"
+                            android:letterSpacing="0"
+                            android:lineHeight="20dp"
+                            android:maxLength="6"
+                            android:textColor="#667085"
+                            android:textFontWeight="400"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/inner_space5"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp">
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginSubmitButtonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="350dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/green_bg_button"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:fontFamily="@font/dm_sans_semibold"
+                    android:letterSpacing="0"
+                    android:lineHeight="24dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:text="Giriş yap"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/inner_space6"
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/sifremiUnuttumParent"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/sifremiUnuttumTextContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sifremiUnuttumButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:clickable="true"
+                        android:fontFamily="@font/dm_sans_semibold"
+                        android:gravity="center"
+                        android:letterSpacing="0"
+                        android:lineHeight="20dp"
+                        android:text="Şifremi unuttum"
+                        android:textColor="#28BD25"
+                        android:textFontWeight="600"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BodyContainer"
+        app:layout_constraintVertical_bias="1.0">
+
+        <FrameLayout
+            android:id="@+id/inner_space7"
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/kurumsalMusteriText"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:fontFamily="@font/dm_sans"
+            android:letterSpacing="0"
+            android:lineHeight="18dp"
+            android:text="Kurumsal müşteri misiniz?"
+            android:textAlignment="center"
+            android:textColor="#2E3949"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:id="@+id/inner_space8"
+            android:layout_width="match_parent"
+            android:layout_height="4dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/kurumsalIcinGirisYap"
+            android:layout_width="166dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:fontFamily="@font/dm_sans_semibold"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:lineHeight="20dp"
+            android:text="Kurumsal için giriş yapın"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/odero_color_green"
+            android:textFontWeight="600"
+            android:textSize="14sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

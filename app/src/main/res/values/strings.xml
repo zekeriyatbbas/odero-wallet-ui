@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OderoWalletFromScratch</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hesabim_var">Hesabım var, giriş yap</string>
+    <string name="uye_ol">Üye ol</string>
+    <string name="lang_tr">TR</string>
+</resources>

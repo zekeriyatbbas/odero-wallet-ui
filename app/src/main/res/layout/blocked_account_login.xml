@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BlockedAccountParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/Spacing1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/Error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="error_image"
+            app:srcCompat="@drawable/error" />
+
+        <FrameLayout
+            android:id="@+id/Spacing2"
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/mainErrorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_medium"
+            android:letterSpacing="0"
+            android:lineHeight="24dp"
+            android:text="Güvenliğin için Ödero şifren bloke edildi"
+            android:textAlignment="center"
+            android:textColor="@color/odero_black_gray"
+            android:textFontWeight="500"
+            android:textSize="20dp" />
+
+        <FrameLayout
+            android:id="@+id/Spacing3"
+            android:layout_width="match_parent"
+            android:layout_height="8dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/additionalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:fontFamily="@font/dm_sans"
+            android:letterSpacing="0"
+            android:lineHeight="24dp"
+            android:text="Blokeyi kaldırmak için kendini
+            doğrulaman ve yeni bir şifre belirlemen
+            gerekiyor"
+            android:textAlignment="center"
+            android:textColor="@color/odero_gray"
+            android:textFontWeight="400"
+            android:textSize="16dp" />
+
+        <FrameLayout
+            android:id="@+id/Spacing4"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/passwordResetButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/green_bg_button"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="Şifreni sıfırla"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <FrameLayout
+            android:id="@+id/Spacing5"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dismissText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Vazgeç"
+            android:fontFamily="@font/dm_sans_semibold"
+            android:textFontWeight="600"
+            android:textSize="16dp"
+            android:lineHeight="24dp"
+            android:letterSpacing="0"
+            android:textColor="@color/odero_color_green"
+            android:textAlignment="center"/>
+
+        <FrameLayout
+            android:id="@+id/Spacing6"
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

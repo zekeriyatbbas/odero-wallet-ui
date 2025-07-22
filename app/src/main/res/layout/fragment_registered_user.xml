@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RegisteredUser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="390dp"
+    android:minHeight="844dp"
+    android:orientation="vertical"
+    tools:context=".RegisteredUser">
+
+
+    <FrameLayout
+        android:id="@+id/StatusBar"
+        android:layout_width="390dp"
+        android:layout_height="47dp">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/Spacing"
+        android:layout_width="390dp"
+        android:layout_height="24dp">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/oderoLogo"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"/>
+
+    <FrameLayout
+        android:id="@+id/Spacing2"
+        android:layout_width="390dp"
+        android:layout_height="40dp">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/TextContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="390dp"
+        android:orientation="vertical"
+        android:minHeight="80dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/HosGeldinBaris"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:minHeight="44dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:letterSpacing="0"
+            android:lineHeight="44dp"
+            android:text=" Hoş geldin"
+            android:textAlignment="center"
+            android:textColor="@color/odero_black_gray"
+            android:textFontWeight="500"
+            android:textSize="35dp" />
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="12dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/GirisYapmakIcin"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:minHeight="24dp"
+            android:text="Giriş yapmak için lütfen Ödero şifreni gir"
+            android:textColor="@color/odero_gray"
+            android:textFontWeight="400"
+            android:textSize="16dp"
+            android:lineHeight="24dp"
+            android:letterSpacing="0"
+            android:textAlignment="center"
+            android:fontFamily="@font/dm_sans" />
+
+        <FrameLayout
+            android:id="@+id/Spacing3"
+            android:layout_width="390dp"
+            android:layout_height="32dp">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/OTPInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="350dp"
+            android:minHeight="64dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/OTP01"
+                android:layout_width="48.33dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/otp_input_background"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/OTP02"
+                android:layout_width="48.33dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/otp_input_background"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/OTP03"
+                android:layout_width="48.33dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/otp_input_background"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/OTP04"
+                android:layout_width="48.33dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/otp_input_background"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/OTP05"
+                android:layout_width="48.33dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/otp_input_background"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/OTP06"
+                android:layout_width="48.33dp"
+                android:layout_height="64dp"
+                android:background="@drawable/otp_input_background"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/Spacing4"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/SifremiUnuttum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Şifremi unuttum"
+            android:clickable="true"
+            android:textAlignment="center"
+            android:fontFamily="@font/dm_sans_semibold"
+            android:textFontWeight="600"
+            android:textSize="14dp"
+            android:lineHeight="20dp"
+            android:letterSpacing="0"
+            android:textColor="@color/odero_color_green"/>
+
+        <FrameLayout
+            android:id="@+id/Spacing5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BottomContainerParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/BottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="390dp"
+            android:minHeight="108dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:id="@+id/Spacing6"
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/BarisDegilMisin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans"
+                android:letterSpacing="0"
+                android:lineHeight="18dp"
+                android:minHeight="18dp"
+                android:text="değil misin?"
+                android:textAlignment="center"
+                android:textColor="@color/odero_textsBody"
+                android:textFontWeight="400"
+                android:textSize="12dp" />
+
+            <FrameLayout
+                android:id="@+id/Spacing7"
+                android:layout_width="match_parent"
+                android:layout_height="4dp">
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/FarkliBirHesaplaGirisYap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="179dp"
+                android:minHeight="20dp"
+                android:clickable="true"
+                android:text="Farklı bir hesapla giriş yap"
+                android:textAlignment="center"
+                android:fontFamily="@font/dm_sans_semibold"
+                android:textFontWeight="600"
+                android:textSize="14dp"
+                android:lineHeight="20dp"
+                android:letterSpacing="0"
+                android:textColor="@color/odero_color_green"/>
+
+            <FrameLayout
+                android:id="@+id/Spacing8"
+                android:layout_width="match_parent"
+                android:layout_height="8dp">
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
