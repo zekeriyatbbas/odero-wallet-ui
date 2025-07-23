@@ -61,7 +61,9 @@ class OnBoarding01 : Fragment() {
             // navigate to the signup fragment
         }
         binding.loginButton.setOnClickListener {
-            parentFragmentManager.beginTransaction().replace(R.id.Splash, LoginMain()).addToBackStack("OnBoarding01").commit()
+            parentFragmentManager.beginTransaction().replace(R.id.Splash, LoginMain())
+                .addToBackStack("OnBoarding01")
+                .commit()
         }
     }
 }

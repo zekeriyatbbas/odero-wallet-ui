@@ -1,6 +1,8 @@
 package com.zekeriya.oderowalletfromscratch
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +22,25 @@ class ResetPasswordPhoneCodeVerification : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.backButtonPhoneVer.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+        binding.OTP06.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                // Optional: called before text is changed
+            }
 
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                // Called as the text is being changed
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                // Optional: called after text is changed
+                parentFragmentManager.beginTransaction().replace(R.id.Splash,
+                    ResetPasswordEmailVerification())
+                    .addToBackStack("ResetPasswordPhoneVerification")
+                    .commit()
+            }
+        })
     }
 }

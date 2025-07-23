@@ -29,6 +29,9 @@ class ResetPassword : Fragment() {
                 .addToBackStack("ResetPasswordIDVerification")
                 .commit()
         }
+        binding.backButtonResetID.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
 
     }
 }
