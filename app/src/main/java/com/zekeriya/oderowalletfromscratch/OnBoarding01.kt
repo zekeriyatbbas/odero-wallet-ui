@@ -1,13 +1,19 @@
 package com.zekeriya.oderowalletfromscratch
 
+import android.app.AlertDialog
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.RadioButton
+import android.widget.TextView
 import androidx.core.view.isVisible
 import com.zekeriya.oderowalletfromscratch.databinding.FragmentOnBoarding01Binding
 
@@ -24,31 +30,32 @@ class OnBoarding01 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.languageFrame.visibility = View.GONE
-        binding.buttonContainer.visibility = View.VISIBLE
-
-        binding.Input.setOnClickListener {
-            binding.buttonContainer.visibility = View.GONE
-            binding.languageFrame.visibility = View.VISIBLE
-        }
-        binding.turkishContainer.setOnClickListener {
-            binding.englishRadioButton.isChecked = false
-            binding.turkishRadioButton.isChecked = true
+        val languageFrameView = layoutInflater.inflate(R.layout.language_frame,null)
+        val languageFrameDialog = AlertDialog.Builder(requireContext())
+            .setView(languageFrameView)
+            .create()
+        languageFrameDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        languageFrameDialog.window?.setGravity(Gravity.BOTTOM)
+        languageFrameView.findViewById<LinearLayout>(R.id.turkishContainer).setOnClickListener {
+            languageFrameView.findViewById<RadioButton>(R.id.turkishRadioButton).isChecked = true
+            languageFrameView.findViewById<RadioButton>(R.id.englishRadioButton).isChecked = false
             binding.flag.setImageResource(R.drawable.flag_turkey)
             binding.languageText.text = "TR"
-            binding.dil.text = "Dil"
-            binding.languageFrame.visibility = View.GONE
-            binding.buttonContainer.visibility = View.VISIBLE
+            languageFrameView.findViewById<TextView>(R.id.dil).text = "Dil"
+            languageFrameDialog.dismiss()
         }
-        binding.englishContainer.setOnClickListener {
-            binding.turkishRadioButton.isChecked = false
-            binding.englishRadioButton.isChecked = true
+        languageFrameView.findViewById<LinearLayout>(R.id.englishContainer).setOnClickListener {
+            languageFrameView.findViewById<RadioButton>(R.id.englishRadioButton).isChecked = true
+            languageFrameView.findViewById<RadioButton>(R.id.turkishRadioButton).isChecked = false
             binding.flag.setImageResource(R.drawable.flag_uk)
             binding.languageText.text = "EN"
-            binding.dil.text = "Language"
-            binding.languageFrame.visibility = View.INVISIBLE
-            binding.buttonContainer.visibility = View.VISIBLE
+            languageFrameView.findViewById<TextView>(R.id.dil).text = "Language"
+            languageFrameDialog.dismiss()
         }
+        binding.Input.setOnClickListener {
+            languageFrameDialog.show()
+        }
+
 
         binding.signupButton.setOnClickListener {
             // navigate to the signup fragment

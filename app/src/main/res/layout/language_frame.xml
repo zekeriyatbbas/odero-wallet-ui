@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/languageFrameMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/languageFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_background"
+        android:minWidth="390dp"
+        android:minHeight="295dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/langFrameSpacing1"
+            android:layout_width="match_parent"
+            android:layout_height="12dp">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/langFrameSpacing2"
+            android:layout_width="match_parent"
+            android:layout_height="28dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_medium"
+            android:letterSpacing="0"
+            android:lineHeight="24dp"
+            android:minHeight="24dp"
+            android:text="Dil"
+            android:textAlignment="center"
+            android:textColor="@color/odero_black_gray"
+            android:textFontWeight="500"
+            android:textSize="20dp" />
+
+        <FrameLayout
+            android:id="@+id/langFrameSpacing3"
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/turkishContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:minHeight="72dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/langFrameSpacing4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/innerFrameTurkish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="350dp"
+                android:minHeight="32dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/flagTurkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="32dp"
+                    android:minHeight="32dp"
+                    android:src="@drawable/flag_turkey" />
+
+                <TextView
+                    android:id="@+id/turkishText"
+                    android:layout_width="230dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="@font/dm_sans_medium"
+                    android:gravity="center|left"
+                    android:letterSpacing="0"
+                    android:lineHeight="24dp"
+                    android:text="Türkçe"
+                    android:textColor="@color/odero_black_gray"
+                    android:textFontWeight="500"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/turkishRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/odero_color_green"
+                    android:checked="true"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/englishContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:minHeight="72dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/langFrameSpacing5"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/innerFrameEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="350dp"
+                android:minHeight="32dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/flagUK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="32dp"
+                    android:minHeight="32dp"
+                    android:src="@drawable/flag_uk" />
+
+                <TextView
+                    android:id="@+id/englishText"
+                    android:layout_width="230dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="@font/dm_sans_medium"
+                    android:gravity="center|left"
+                    android:letterSpacing="0"
+                    android:lineHeight="24dp"
+                    android:text="English"
+                    android:textColor="@color/odero_black_gray"
+                    android:textFontWeight="500"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/englishRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="@color/odero_color_green"
+                    android:checked="false"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

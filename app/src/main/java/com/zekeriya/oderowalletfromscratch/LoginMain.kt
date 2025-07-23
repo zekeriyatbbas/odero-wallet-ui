@@ -12,6 +12,7 @@ import com.zekeriya.oderowalletfromscratch.databinding.FragmentLoginMainBinding
 import android.app.AlertDialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.text.method.DigitsKeyListener
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -41,14 +42,17 @@ class LoginMain : Fragment() {
                 immTc.showSoftInput(binding.tcTextInput, InputMethodManager.SHOW_IMPLICIT)
             }
         }
+        binding.tcTextInput.keyListener = DigitsKeyListener.getInstance("0123456789")
+
         binding.passwordInput.setOnClickListener {
-            binding.sifreTextInput.post {
-                binding.sifreTextInput.requestFocus()
+            binding.passwordTextInput.post {
+                binding.passwordTextInput.requestFocus()
                 Log.d("Focus", "Has focus: ${binding.tcTextInput.hasFocus()}")
                 val immPass = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                immPass.showSoftInput(binding.sifreTextInput, InputMethodManager.SHOW_IMPLICIT)
+                immPass.showSoftInput(binding.passwordTextInput, InputMethodManager.SHOW_IMPLICIT)
             }
         }
+        binding.passwordTextInput.keyListener = DigitsKeyListener.getInstance("0123456789")
         binding.loginButton.setOnClickListener {
             // a coroutine that deals with the user-password verification will be placed here ????
             var isRegistered = true

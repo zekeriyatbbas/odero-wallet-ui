@@ -161,7 +161,7 @@
                             android:focusableInTouchMode="true"
                             android:fontFamily="@font/dm_sans"
                             android:hint="TC Kimlik Numarası"
-                            android:inputType="numberSigned"
+                            android:inputType="number"
                             android:letterSpacing="0"
                             android:lineHeight="20dp"
                             android:maxLength="11"
@@ -200,14 +200,14 @@
                         android:src="@drawable/lock_img" />
 
                     <LinearLayout
-                        android:id="@+id/sifreInputTextContainer"
+                        android:id="@+id/passwordInputTextContainer"
                         android:layout_width="286dp"
                         android:layout_height="44dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <EditText
-                            android:id="@+id/sifreTextInput"
+                            android:id="@+id/passwordTextInput"
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
                             android:background="@null"

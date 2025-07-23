@@ -69,9 +69,7 @@
             android:fontFamily="@font/dm_sans"
             android:letterSpacing="0"
             android:lineHeight="24dp"
-            android:text="Blokeyi kaldırmak için kendini
-            doğrulaman ve yeni bir şifre belirlemen
-            gerekiyor"
+            android:text="Blokeyi kaldırmak için kendini\ndoğrulaman ve yeni bir şifre belirlemen\ngerekiyor"
             android:textAlignment="center"
             android:textColor="@color/odero_gray"
             android:textFontWeight="400"
