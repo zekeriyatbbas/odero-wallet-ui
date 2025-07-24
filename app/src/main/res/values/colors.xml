@@ -10,4 +10,5 @@
     <color name="odero_textsBody">#2E3949</color>
     <color name="odero_primary_400_brand">#35D32F</color>
     <color name="odero_gray_400_placeholder">#98A2B3</color>
+    <color name="odero_gray_700_medium_emphasis">#344054</color>
 </resources>
