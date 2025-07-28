@@ -28,7 +28,6 @@ class ResetPasswordPhoneCodeVerification : Fragment() {
         binding.backButtonPhoneVer.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
-
         val OTPInputs = listOf(
             binding.OTP01,
             binding.OTP02,
@@ -38,65 +37,69 @@ class ResetPasswordPhoneCodeVerification : Fragment() {
             binding.OTP06
         )
 
+        OTPInputs[0].isFocusable = true
+        OTPInputs[0].isFocusableInTouchMode = true
+        OTPInputs[0].requestFocus()
+
         for (i in OTPInputs.indices) {
             OTPInputs[i].addTextChangedListener(object : TextWatcher {
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                     if (!s.isNullOrEmpty() && i < OTPInputs.size - 1) {
+                        OTPInputs[i].isFocusable = false
+                        OTPInputs[i].isFocusableInTouchMode = false
+                        OTPInputs[i+1].isFocusable = true
+                        OTPInputs[i+1].isFocusableInTouchMode = true
                         OTPInputs[i + 1].requestFocus()
                     }
                 }
                 override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
                 override fun afterTextChanged(s: Editable?) {
-                    if (areAllOTPsFilled(OTPInputs)){
-                        parentFragmentManager.beginTransaction().replace(R.id.Splash,
-                            ResetPasswordSetNewPassword()).addToBackStack("ResetPasswordEmailVerification")
-                            .commit()
-                    }
+
                 }
             })
             OTPInputs[i].setOnKeyListener { v, keyCode, event ->
                 if (keyCode == KeyEvent.KEYCODE_DEL && event.action == KeyEvent.ACTION_DOWN && OTPInputs[i].text.isEmpty() && i > 0) {
+                    OTPInputs[i].isFocusable = false
+                    OTPInputs[i].isFocusableInTouchMode = false
+                    OTPInputs[i-1].isFocusable = true
+                    OTPInputs[i-1].isFocusableInTouchMode = true
                     OTPInputs[i - 1].requestFocus()
-                    true
-                } else {
                     false
                 }
+                false
             }
             OTPInputs[i].setOnFocusChangeListener{
                     _, hasFocus ->
                 if (hasFocus) {
-                    // On focus: change to focused color
                     (OTPInputs[i].background as? GradientDrawable)?.setStroke(2,resources.getColor(R.color.odero_color_green))
                 } else {
-                    // On blur: revert to original color
                     (OTPInputs[i].background as? GradientDrawable)?.setStroke(2,resources.getColor(R.color.odero_surface_border))
                 }
             }
         }
-        //////
 
-        binding.OTP06.addTextChangedListener(object : TextWatcher {
+
+        OTPInputs[5].addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // Optional: called before text is changed
-            }
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // Called as the text is being changed
             }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
             override fun afterTextChanged(s: Editable?) {
-                // Optional: called after text is changed
-                parentFragmentManager.beginTransaction().replace(R.id.Splash,
-                    ResetPasswordEmailVerification())
-                    .addToBackStack("ResetPasswordPhoneVerification")
-                    .commit()
+                if (areAllOTPsFilled(OTPInputs)){
+                    parentFragmentManager.beginTransaction().replace(R.id.Splash,
+                        ResetPasswordEmailVerification()).addToBackStack("ResetPasswordPhoneCodeVerification")
+                        .commit()
+                }
             }
         })
     }
 
     fun areAllOTPsFilled(OTPInputs: List<EditText>) : Boolean{
         for (otpInput in OTPInputs){
-            if (otpInput.text.toString().length != 1) { return false }
+            if (otpInput.text.toString().length != 1) {
+                return false
+            }
         }
         return true
     }

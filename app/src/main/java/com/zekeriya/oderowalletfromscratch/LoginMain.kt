@@ -56,16 +56,36 @@ class LoginMain : Fragment() {
         binding.loginButton.setOnClickListener {
             // a coroutine that deals with the user-password verification will be placed here ????
             var isRegistered = true
+            val typedID = binding.tcTextInput.text.toString()
+            val typedPassword = binding.passwordTextInput.text.toString()
+            if (typedID.length != 11){
+                this.createErrorDialog(loginErrorTypesDialog[2])
+            }else{
+                isRegistered = true
+            }
+            if (typedPassword.length != 6){
+                isRegistered = false
+                this.createErrorDialog(loginErrorTypesDialog[3])
+            }else{
+                isRegistered = true
+            }
+
             if (isRegistered) {
                 // as we proceed with the registered user, I didn't add the LoginMain fragment to the backstack
                 parentFragmentManager.beginTransaction().replace(R.id.Splash, RegisteredUser()).commit()
             }
         }
-        //this.createErrorDialog("wrong_info")
+
         //this.createErrorDialog("wrong_password")
         //this.createErrorDialog("id_not_given")
         //this.createErrorDialog("password_not_given")
-        this.createErrorDialog("account_blocked")
+        //this.createErrorDialog("account_blocked")
+
+        binding.sifremiUnuttumButton.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.Splash, ResetPassword())
+                .addToBackStack("LoginMain").commit()
+        }
     }
 
     fun createErrorDialog(loginErrorType: String) {
