@@ -34,7 +34,7 @@ class SignUpIDInformation : Fragment() {
             val IDText = binding.TCInput.text.toString()
             if (IDText.length == 11 && nameText.length > 0 && surnameText.length > 0){
                 parentFragmentManager.beginTransaction().replace(R.id.Splash,
-                    SignUpContactInformation()).commit()
+                    SignUpContactInformation()).addToBackStack("SignUpIDInformation").commit()
             }
             if (nameText.length == 0){
                 this.createErrorDialog(IDInformationErrorTypes[0])
@@ -46,7 +46,7 @@ class SignUpIDInformation : Fragment() {
         }
 
     }
-    fun createErrorDialog(errorType: String){
+    private fun createErrorDialog(errorType: String){
         if (!IDInformationErrorTypes.contains(errorType)){
             return
         }
