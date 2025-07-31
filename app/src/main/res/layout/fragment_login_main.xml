@@ -102,7 +102,7 @@
                     android:lineHeight="30dp"
                     android:text="Giriş yap"
                     android:textAlignment="center"
-                    android:textColor="#101828"
+                    android:textColor="@color/odero_black_gray"
                     android:textFontWeight="500"
                     android:textSize="24dp" />
 
@@ -165,7 +165,7 @@
                             android:letterSpacing="0"
                             android:lineHeight="20dp"
                             android:maxLength="11"
-                            android:textColor="#667085"
+                            android:textColor="@color/odero_gray"
                             android:textFontWeight="400"
                             android:textSize="14dp" />
                     </LinearLayout>
@@ -220,7 +220,7 @@
                             android:letterSpacing="0"
                             android:lineHeight="20dp"
                             android:maxLength="6"
-                            android:textColor="#667085"
+                            android:textColor="@color/odero_gray"
                             android:textFontWeight="400"
                             android:textSize="14dp" />
                     </LinearLayout>
@@ -301,7 +301,7 @@
                         android:letterSpacing="0"
                         android:lineHeight="20dp"
                         android:text="Şifremi unuttum"
-                        android:textColor="#28BD25"
+                        android:textColor="@color/odero_color_green"
                         android:textFontWeight="600"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -340,7 +340,7 @@
             android:lineHeight="18dp"
             android:text="Kurumsal müşteri misiniz?"
             android:textAlignment="center"
-            android:textColor="#2E3949"
+            android:textColor="@color/odero_textsBody"
             android:textFontWeight="400"
             android:textSize="12sp" />
 
