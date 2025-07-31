@@ -69,7 +69,9 @@ class SignUpContactInformation : Fragment() {
                 }
             }
         }
-
+        binding.backButtonSignUpContactInfo.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
         binding.OuterShell.setOnClickListener {
             var areAllCheckboxesApproved = true
             for (checkBox in checkBoxes){

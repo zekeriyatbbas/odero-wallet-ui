@@ -43,7 +43,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/backButtonSignUpIDInfo"
+                    android:id="@+id/backButtonSignUpContactInfo"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/back_button"

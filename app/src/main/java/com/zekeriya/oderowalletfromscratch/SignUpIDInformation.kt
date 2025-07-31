@@ -27,6 +27,9 @@ class SignUpIDInformation : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.backButtonSignUpIDInfo.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
 
         binding.OuterShell.setOnClickListener {
             val nameText = binding.NameInput.text.toString()
